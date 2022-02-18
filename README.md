@@ -1,6 +1,7 @@
 # Improved_Coincidence_Code
 
 Read me: Coincidence_creation code		Last edit 17/02/2022
+This program uses the CERN ROOT library.
 Main program is made such that a Settings.dat file provides all of the inputs.
 Time difference histogram is kept at 40 bins (for now).
 For additional information, contact "michael.heines@kuleuven.be"
