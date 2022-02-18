@@ -1,0 +1,27 @@
+M120 analysis:
+/mnt/ksf9/H2/user/u0148069/_IO/MEDICIS/MED024_2020/Nov/Coincidence/raw_data/
+/mnt/ksf9/H2/user/u0148069/share/my.public/Coincidence_creation/output/M120_semiexp/
+m120_Activities_semiexp.csv
+_m120_coincidences.root
+_m120_singles.root
+4
+m120/MED024_M120_1/RAW/, m120/MED024_M120_2/RAW/, m120/MED024_M120_3/RAW/, m120/MED024_M120_4/RAW/
+1_, 2_, 3_, 4_
+-----
+12, 9, 15, 0
+-----
+12, 12, 12, 12
+15, 17, 23, 30
+15, 16, 9, 14
+30, 24, 28, 14
+-----
+9.9203, 465, 1567, 46.9224211794
+218.0, 440.45, 1567.0
+100, 300, 300, 600, 1300, 1600
+5, 10
+3, 5, 25
+0
+-----
+Data_R, DataR
+2000, 200.0, 0.00000283909
+-----
