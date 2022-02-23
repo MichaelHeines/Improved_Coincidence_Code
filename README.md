@@ -6,6 +6,8 @@ Main program is made such that a Settings.dat file provides all of the inputs.
 Time difference histogram is kept at 40 bins (for now).
 For additional information, contact "michael.heines@kuleuven.be"
 
+DISCLAIMER: This code was written for the analysis of an experimental campaign at CERN-MEDICIS. The author cannot be held responsible for any shortcomings of the code.
+
 Reading_dat.h:
 Read_out structure: designed to provide program with initialization
 Reading_dat()
