@@ -8,7 +8,6 @@ Running the program:
 	Have a g++ compiler installed
 	Make sure root is compiled with the same version as you are running in the compiler
 
-	(to build, install cmake)
 	./build.sh	This will execute the build script that produces the build directory with exe file
 	cd build	change to build directory
 	make sure the writing directory exists before running the code
