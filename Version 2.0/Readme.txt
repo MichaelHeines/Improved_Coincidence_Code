@@ -9,9 +9,12 @@ Running the program:
 	Make sure root is compiled with the same version as you are running in the compiler
 
 	./build.sh	This will execute the build script that produces the build directory with exe file
-	cd build	change to build directory
 	make sure the writing directory exists before running the code
+	
+	cd build	change to build directory
 	./main.exe directory/settings.dat	execute main program with settings file named settings.dat located in directory
+	alternatively run ./build/main.exe directory/settings.dat from main directory
+	
 	For details on the settings format, see Reading_dat.h
 
 	Turn of the creation of new trees in histograms when no changes have been made since the last run
