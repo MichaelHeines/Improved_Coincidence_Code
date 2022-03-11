@@ -12,7 +12,7 @@ else
   echo "mkdir ${DIR} ... "
 fi
 
-echo "build dir: $DIR"; g++ Complete_analysis.cpp `root-config --cflags --glibs` -o build/main.exe -lSpectrum;
+echo "build dir: $DIR"; g++ -O2 -finline-functions Complete_analysis.cpp `root-config --cflags --glibs` -o build/main.exe -lSpectrum;
 #cmake . -B${DIR} -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}; cd ${DIR}; make VERBOSE=1
 
 
