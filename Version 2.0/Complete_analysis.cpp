@@ -13,7 +13,7 @@
 #include "Exponential_fit.h"
 
 // INPUT: .dat file, for format see Readin_dat.h
-// Planned adaptations: exponential fitting, build an exe? --> Faster, cleaner, but more black-box like
+// Planned adaptations: exponential fitting
 // OUTPUT: Currently csv; Fitting in python is nice and easy, keep it for now but made empty header Exponential_fit.h that can be implemented
 
 int main(int argc, char** argv) {
