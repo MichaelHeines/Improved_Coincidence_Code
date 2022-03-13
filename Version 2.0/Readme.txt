@@ -1,4 +1,7 @@
-Read me: Coincidence_creation code		Last edit 03/10		version: 2.0
+Read me: Coincidence_creation code		Last edit 03/13		version: 2.0
+DISCLAIMER: This code was written for the analysis of an experimental campaign at CERN-MEDICIS. The author cannot be held responsible for any shortcomings of the code.
+Before compiling the code for the first time, execute the command "chmod +x ./build.sh" once to allow the build file to create the executable
+
 Main program is made such that a Settings.dat file provides all of the inputs.
 Time difference histogram is kept at 40 bins (for now).
 For additional information, contact "michael.heines@kuleuven.be"
