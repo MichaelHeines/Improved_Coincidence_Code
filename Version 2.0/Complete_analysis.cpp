@@ -84,7 +84,7 @@ int main(int argc, char** argv) {
 		durations[i] = measurement_time;
 	}
 
-	mean_times = get_meantimes(nr_dirs, init_times, durations, half_life);
+	mean_times = get_meantimes(nr_dirs, init_times, durations, half_life, datatype_chain, datatype_tree);
 	per_batch = parts_per_batch(nr_dirs, data_dir, ls_dirs, mean_times, minimal_coinc, half_life, datatype_chain, datatype_tree, coinc_to_total);
 	
 	for (Int_t i = 0; i < nr_dirs; i++) {
