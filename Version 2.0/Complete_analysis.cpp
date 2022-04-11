@@ -80,11 +80,11 @@ int main(int argc, char** argv) {
 	// Calculate the mean time and number of data points per batch as defined in file chainer header file
 	for (Int_t i = 0; i < nr_dirs; i++) {
 		init_times[i] = 30 * (months[i] - month_0) + (days[i] - day_0) + ((hours[i] - hour_0) / 24.0);
-		Double_t measurement_time = meas_time(data_dir, ls_dirs[i]);
+		Double_t measurement_time = meas_time(data_dir, ls_dirs[i], datatype_chain, datatype_tree);
 		durations[i] = measurement_time;
 	}
 
-	mean_times = get_meantimes(nr_dirs, init_times, durations, half_life, datatype_chain, datatype_tree);
+	mean_times = get_meantimes(nr_dirs, init_times, durations, half_life);
 	per_batch = parts_per_batch(nr_dirs, data_dir, ls_dirs, mean_times, minimal_coinc, half_life, datatype_chain, datatype_tree, coinc_to_total);
 	
 	for (Int_t i = 0; i < nr_dirs; i++) {
