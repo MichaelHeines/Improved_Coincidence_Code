@@ -21,9 +21,9 @@ std::vector<Double_t> get_meantimes(const Int_t nr_dirs, std::vector<Double_t> i
 
 
 
-Double_t meas_time(TString read_dir, TString filename) {
-	TChain* mytree = new TChain("Data_R");
-	add_files_to_chain(mytree, "DataR", ".root", read_dir + filename);
+Double_t meas_time(TString read_dir, TString filename, TString datatype_chain, TString datatype_tree) {
+	TChain* mytree = new TChain(datatype_chain);
+	add_files_to_chain(mytree, datatype_tree, ".root", read_dir + filename);
 
 	TBranch* Time_branch = mytree->GetBranch("Timestamp");
 	ULong64_t time;
