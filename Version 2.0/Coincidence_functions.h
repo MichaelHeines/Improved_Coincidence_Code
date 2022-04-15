@@ -52,14 +52,6 @@ void coincidence_creation(std::vector<TString> coincidences_filename, TString th
 	bool coinc_bool;
 	TString coinc_name = "Coincidence events ";
 
-	// Define/set some variables/parameters
-	ULong64_t t0, t1;
-	Float_t dt;
-	UShort_t e0, e1;
-	bool multiple;
-	Int_t nr_coincidences = 0;
-	Double_t range_low, range_high;
-
 	// Loop over number of desired data points within a batch
 	for (Double_t k = 0; k < nr_datapoints; k++) {
 		std::cout << coincidences_filename[k] << std::endl;
