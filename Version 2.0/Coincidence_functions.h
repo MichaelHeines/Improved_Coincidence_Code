@@ -31,7 +31,8 @@ void coincidence_creation(std::vector<TString> coincidences_filename, TString th
 		std::cout << coincidences_filename[k] << std::endl;
 		TFile* hfile = TFile::Open(write_dir + coincidences_filename[k], "RECREATE");
 		TTree* coinc_tree = new TTree("ctree", coinc_name);						
-
+	}
+		
 	// Prepare assignments input tree
 	TBranch* Energy_branch = mychain->GetBranch("Energy");							// Assign the branches
 	TBranch* Channel_branch = mychain->GetBranch("Channel");
