@@ -12,11 +12,6 @@
 void coincidence_creation(std::vector<TString> coincidences_filename, TString this_dir, TString write_dir, Int_t nr_datapoints, ULong64_t window, Int_t cutted_events, Int_t window_events, TString data_type_chain, TString data_type_tree, Int_t hist_bins, Double_t ns_window) {
 	TChain* mychain = new TChain(data_type_chain);								// Chain the files
 	add_files_to_chain(mychain, data_type_tree, ".root", this_dir);
-	ULong64_t coinc_time;
-	Float_t t_diff;
-	UShort_t coinc_e0, coinc_e1, coinc_detector;
-	bool coinc_bool;
-	TString coinc_name = "Coincidence events ";
 
 	// Define/set some variables/parameters
 	ULong64_t t0, t1;
