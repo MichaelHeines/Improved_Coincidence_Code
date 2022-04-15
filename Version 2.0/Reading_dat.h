@@ -9,33 +9,34 @@
 
 #include <TROOT.h>
 
-
+//////// Format for settings file ////////
 // Line1: comment line for user --> skip
 // Line2: read dir string
 // Line3: write dir string
-// Line4: data dir string
-// Line5: output csv string
-// Line6: coincidence filename string
-// Line7: single filename string
+// Line4: output csv string
+// Line5: coincidence filename string
+// Line6: single filename string
+// Line7: Number of directories
 // Line8: ls dirs vector of strings
 // Line9: indices vector of strings
 // Line10: -----
 // Line11: month_0, day_0, hour_0, minute_0
-// Line12: days
+// Line12: ----- 
 // Line13: months
-// Line14: hours
-// Line15: minutes
-// Line16: -----
-// Line17: half_life, E1, E2, ratio_to_activity
-// Line18: calibration energies
-// Line19: ranges
-// Line20: hwidths
-// Line21: cutted_events, window_events, minimal coinc
-// Line22: process_raw
-// Line23: -----
-// Line24: dataype_chain, datatype_tree
-// Line25: hist bins, ns window, coinc_to_total (run for entire last batch or estimate)
-// Line26: -----
+// Line14: days
+// Line15: hours
+// Line16: minutes
+// Line17: -----
+// Line18: half_life, E1, E2, ratio_to_activity
+// Line19: calibration energies
+// Line20: ranges
+// Line21: hwidths
+// Line22: cutted_events, window_events, minimal coinc
+// Line23: process_raw
+// Line24: -----
+// Line25: dataype_chain, datatype_tree
+// Line26: hist bins, ns window, coinc_to_total (run for entire last batch or estimate)
+// Line27: -----
 
 
 // Structure made specifically for initialization
@@ -50,7 +51,7 @@ struct Read_out {
 };
 
 
-
+// Read data from settings file
 Read_out Reading_dat(TString dat_name, TString data_dir, TString write_dir, TString output_file, TString coincidences_filename, TString singles_filename, TString datatype_chain, TString datatype_tree, Double_t month_0, Double_t day_0, Double_t hour_0, Double_t half_life, Double_t E0, Double_t E1, Double_t ratio_to_activity, Double_t ns_window, Double_t coinc_to_total, Int_t nr_dirs, Int_t cutted_events, Int_t window_events, Int_t minimal_coinc, Int_t hist_bins, std::vector<TString> *ls_dirs, std::vector<TString> *indices, std::vector<Double_t> *months, std::vector<Double_t> *days, std::vector<Double_t> *hours, std::vector<Double_t> calibrations, std::vector<Int_t> ranges, std::vector<Int_t> hwidth, bool process_raw) {
 	//	In: Filename and initialized variables
 	//	Out: Read_out structure
