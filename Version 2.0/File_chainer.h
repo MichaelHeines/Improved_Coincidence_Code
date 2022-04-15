@@ -9,6 +9,7 @@
 #include <TSystemDirectory.h>
 
 
+// Add files from directory starting with startstring and ending with endstring to a chain
 Int_t add_files_to_chain(TChain* chain, TString startstring, TString endstring, TString directory) {
 	const char* dirname = directory;
 	printf("Current directory is %s \n", dirname);
@@ -59,9 +60,9 @@ Int_t add_files_to_chain(TChain* chain, TString startstring, TString endstring, 
 }
 
 
-
+// Calculate the number of data points within a batch
 std::vector<Int_t> parts_per_batch(const Int_t nr_dirs, TString data_dir, std::vector<TString> ls_dirs, std::vector<Double_t> mean_times, Int_t minimal_coinc, Double_t half_life, TString data_type_chain, TString data_type_tree, Double_t coinc_to_tot) {
-	//Double_t coinc_to_tot = 601 / 189046414.0;											// M108: 601/189046414.0;		M120: 829 / 291994800.0			// Check how many coincidences in the last batch before running!
+	//Double_t coinc_to_tot = 601 / 189046414.0;								// M108: 601/189046414.0; M120: 829 / 291994800.0			// Check how many coincidences in the last batch before running!
 	Double_t desired_final_filelength = minimal_coinc / coinc_to_tot;					// about 110.000
 	//std::cout << desired_final_filelength << std::endl;
 	Double_t time_diff;
