@@ -13,6 +13,13 @@ void coincidence_creation(std::vector<TString> coincidences_filename, TString th
 	TChain* mychain = new TChain(data_type_chain);								// Chain the files
 	add_files_to_chain(mychain, data_type_tree, ".root", this_dir);
 
+	// Setup coincidence tree
+	ULong64_t coinc_time;
+	Float_t t_diff;
+	UShort_t coinc_e0, coinc_e1, coinc_detector;
+	bool coinc_bool;
+	TString coinc_name = "Coincidence events ";
+	
 	// Define/set some variables/parameters
 	ULong64_t t0, t1;
 	Float_t dt;
@@ -39,13 +46,7 @@ void coincidence_creation(std::vector<TString> coincidences_filename, TString th
 	mychain->SetBranchAddress("Timestamp", &time);
 	const Int_t entry = mychain->GetEntries();
 	printf("%d entries in chain \n", entry);
-
-	// Setup coincidence tree
-	ULong64_t coinc_time;
-	Float_t t_diff;
-	UShort_t coinc_e0, coinc_e1, coinc_detector;
-	bool coinc_bool;
-	TString coinc_name = "Coincidence events ";
+	
 
 	// Loop over number of desired data points within a batch
 	for (Double_t k = 0; k < nr_datapoints; k++) {
